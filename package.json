@@ -1,14 +1,29 @@
 {
   "name": "beu-result-proxy",
   "version": "1.0.0",
-  "type": "module",
-  "main": "server.js",
+  "description": "Proxy server for Bihar Engineering University results",
+  "main": "index.js",
   "scripts": {
-    "start": "node server.js"
+    "start": "node index.js",
+    "dev": "nodemon index.js"
   },
+  "keywords": [
+    "BEU",
+    "result",
+    "proxy",
+    "bihar-engineering-university"
+  ],
+  "author": "Bihar Engineering Guide",
+  "license": "MIT",
   "dependencies": {
-    "express": "^4.19.2",
-    "node-fetch": "^3.3.2",
-    "cors": "^2.8.5"
+    "axios": "^1.6.0",
+    "cors": "^2.8.5",
+    "express": "^4.18.2"
+  },
+  "devDependencies": {
+    "nodemon": "^3.0.2"
+  },
+  "engines": {
+    "node": ">=18.0.0"
   }
 }
