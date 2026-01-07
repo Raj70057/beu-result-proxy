@@ -1,6 +1,3 @@
-# BEU Result Proxy API
-
-Backend proxy to safely fetch Bihar Engineering University results.
-
-Usage:
-GET /api/beu-result
+git add .
+git commit -m "Fix Render deploy (ESM + fetch)"
+git push origin main
