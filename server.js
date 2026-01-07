@@ -29,11 +29,15 @@ app.get("/api/beu-result", async (req, res) => {
       headers: { "User-Agent": "Mozilla/5.0" }
     });
 
+    if (!response.ok) {
+      throw new Error("BEU fetch failed");
+    }
+
     const data = await response.json();
     res.json(data);
 
-  } catch (error) {
-    console.error(error);
+  } catch (err) {
+    console.error("FETCH ERROR:", err.message);
     res.status(500).json({
       status: 500,
       message: "Failed to fetch BEU result"
@@ -42,5 +46,5 @@ app.get("/api/beu-result", async (req, res) => {
 });
 
 app.listen(PORT, () => {
-  console.log("Server running on port " + PORT);
+  console.log("Server running on port", PORT);
 });
